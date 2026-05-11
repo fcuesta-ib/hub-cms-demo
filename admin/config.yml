@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: fcuesta-ib/hub-cms-demo
+  branch: main
+  # Filled in after the Cloudflare Worker is deployed:
+  # base_url: https://<your-worker>.<your-subdomain>.workers.dev
+  # auth_endpoint: auth
+
+media_folder: "assets/images"
+public_folder: "/hub-cms-demo/assets/images"
+
+collections:
+  - name: home
+    label: Home
+    files:
+      - file: index.md
+        label: Home page
+        name: home
+        fields:
+          - { label: Layout, name: layout, widget: hidden, default: default }
+          - { label: Title, name: title, widget: string }
+          - { label: "Hide H1", name: show_title, widget: hidden, default: false }
+          - { label: Body, name: body, widget: markdown }
+
+  - name: pages
+    label: Pages
+    folder: _pages
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: markdown }

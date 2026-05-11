@@ -1,0 +1,26 @@
+title: CMS Demo
+description: A Jekyll site managed with Decap CMS
+url: "https://fcuesta-ib.github.io"
+baseurl: "/hub-cms-demo"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
