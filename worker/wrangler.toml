@@ -1,0 +1,7 @@
+name = "decap-oauth"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET are set as secrets via:
+#   wrangler secret put GITHUB_CLIENT_ID
+#   wrangler secret put GITHUB_CLIENT_SECRET

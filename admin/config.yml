@@ -2,9 +2,8 @@ backend:
   name: github
   repo: fcuesta-ib/hub-cms-demo
   branch: main
-  # Filled in after the Cloudflare Worker is deployed:
-  # base_url: https://<your-worker>.<your-subdomain>.workers.dev
-  # auth_endpoint: auth
+  base_url: https://decap-oauth.fcuesta-ib.workers.dev
+  auth_endpoint: auth
 
 media_folder: "assets/images"
 public_folder: "/hub-cms-demo/assets/images"
