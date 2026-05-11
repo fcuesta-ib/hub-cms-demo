@@ -6,7 +6,7 @@ show_title: false
 
 # Welcome to CMS Demo
 
-This is the home page of a Jekyll site managed with Decap CMS. (v1.0)
+This is the home page of a Jekyll site managed with Decap CMS. (v1.1)
 
 - [About](./about/)
 - [Contact](./contact/)
