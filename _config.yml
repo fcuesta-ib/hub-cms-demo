@@ -25,3 +25,4 @@ exclude:
   - vendor
   - node_modules
   - worker
+  - README.md
