@@ -3,10 +3,9 @@ layout: default
 title: Home
 show_title: false
 ---
-
 # Welcome to CMS Demo
 
-This is the home page of a Jekyll site managed with Decap CMS. (v1.1)
+This is the home page of a Jekyll site managed with Decap CMS. (v1.2)
 
-- [About](./about/)
-- [Contact](./contact/)
+* [About](./about/)
+* [Contact](./contact/)
