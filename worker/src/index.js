@@ -57,11 +57,13 @@ function htmlPostMessage(message) {
 <html><body><script>
 (function () {
   var msg = ${JSON.stringify(message)};
-  function send() { if (window.opener) window.opener.postMessage(msg, "*"); }
-  window.addEventListener("message", function (e) {
-    if (typeof e.data === "string" && e.data.indexOf("authorizing:github") === 0) send();
-  }, false);
-  send();
+  function receive(e) {
+    if (!window.opener) return;
+    window.opener.postMessage(msg, e.origin);
+    window.removeEventListener("message", receive, false);
+  }
+  window.addEventListener("message", receive, false);
+  if (window.opener) window.opener.postMessage("authorizing:github", "*");
 })();
 </script><p>Authenticating… you can close this window.</p></body></html>`;
   return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8" } });
